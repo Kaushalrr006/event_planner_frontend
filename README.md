@@ -1,27 +1,33 @@
-# Eventapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+# Event Manager using MEAN 
 
-## Development server
+Event Planner Frontend
+This is a frontend application built with Angular, HTML, CSS, JavaScript, and TypeScript. It is a CRUD application that allows users to create, read, update, and delete events.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The application is hosted at https://event-planner-frontend-kohl.vercel.app/.
 
-## Code scaffolding
+Getting Started
+To run the application locally, you will need to have the following installed:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Node.js
+Angular CLI
+Once you have the prerequisites installed, you can run the following commands to install the dependencies and start the application:
 
-## Build
+npm install
+ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Demo
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://event-planner-frontend-kohl.vercel.app/.
 
-## Further help
+## Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The application allows users to:
+
+-Create new events
+-Read existing events
+-Update existing events
+-Delete existing events
