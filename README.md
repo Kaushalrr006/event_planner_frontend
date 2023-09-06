@@ -28,6 +28,10 @@ https://event-planner-frontend-kohl.vercel.app/.
 The application allows users to:
 
 -Create new events
+
 -Read existing events
+
 -Update existing events
+
 -Delete existing events
+
