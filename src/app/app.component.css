@@ -68,22 +68,22 @@
   border-radius: 8px;
   }
   .tasks-done .task-block {
-    background-color: #f0f0f0; /* Change color for done tasks */
+    background-color: #f0f0f0; 
   }
 
 .task-block.cdk-drag-preview,
 .task-block.cdk-drag-placeholder,
 .task-block.cdk-drag-animating {
-  border-radius: 50%; /* Make it circular */
-  width: 50px; /* Adjust width */
-  height: 50px; /* Adjust height */
+  border-radius: 50%; 
+  width: 50px;
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0; /* Default background color for circular cards */
-  border: 2px solid #333; /* Border for circular cards */
-  color: #333; /* Text color for circular cards */
-  font-size: 16px; /* Font size for circular cards */
+  background-color: #f0f0f0; 
+  border: 2px solid #333;
+  color: #333; 
+  font-size: 16px; 
 }
 
   .task-block:last-child {
@@ -105,23 +105,21 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Center-align the containers */
   .container:nth-child(even) {
     margin-right: 10px;
   }
   
   .tasks-done .task-block {
-    background-color: #ffcc80; /* Light orange for "Task Done" */
+    background-color: #ffcc80; 
     color: #333;
   }
   .task-list .task-block {
-    background-color: #c8e6c9; /* Light green for "Done" */
+    background-color: #c8e6c9; 
     color: #333;
   }
-  /* Hover effect for cards */
   .task-block:hover {
-    background-color: #e0e0e0; /* Change color on hover */
-    transform: scale(1.05); /* Scale up on hover */
+    background-color: #e0e0e0; 
+    transform: scale(1.05); 
     transition: background-color 0.3s, transform 0.3s;
   }
   
