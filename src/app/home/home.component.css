@@ -1,0 +1,125 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.custom-toolbar {
+    background-color: #333; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toolbar-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; 
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: cornflowerblue; 
+  }
+  
+  .spacer {
+    flex: 1; 
+  }
+
+  .wrapper {
+    margin: 25px auto;
+    max-width: 600px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .container {
+    width: 45%;
+    margin: 0 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .tasks-list {
+    width: 80%;
+    border: solid 1px #ccc;
+    min-height: 60px;
+    display: inline-block;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 25px;
+  }
+  .task-block {
+  padding: 20px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  border-radius: 8px;
+  }
+  .tasks-done .task-block {
+    background-color: #f0f0f0; 
+  }
+
+.task-block.cdk-drag-preview,
+.task-block.cdk-drag-placeholder,
+.task-block.cdk-drag-animating {
+  /* border-radius: 50%;  */
+  width: 50px;
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; 
+  border: 2px solid #333;
+  color: #333; 
+  font-size: 16px; 
+}
+
+  .task-block:last-child {
+    border: none;
+  }
+  /* .tasks-list.cdk-drop-list-dragging .movie-block:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  } */
+
+  .container {
+    width: 40%; /* Reduce container width */
+    margin: 20px 10px 10px 0; /* Adjust margins */
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    background-color: #b3daec; /* Background color for containers */
+    border-radius: 8px; /* Rounded edges for containers */
+    padding: 10px; /* Padding for containers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container:nth-child(even) {
+    margin-right: 10px;
+  }
+  
+  .tasks-done .task-block {
+    background-color: #ffcc80; 
+    color: #333;
+  }
+  .task-list .task-block {
+    background-color: #c8e6c9; 
+    color: #333;
+  }
+  .task-block:hover {
+    background-color: #e0e0e0; 
+    /* transform: scale(1.05);  */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
