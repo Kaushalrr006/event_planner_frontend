@@ -1,24 +1,26 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-
+import { EventService } from '../services/event.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  title = 'Eventapp';
-  Tasks = [
-    'Blade Runner',
-    'Cool Hand Luke',
-   
-    'Juice',
-    'The Far Side of the World',
-    'Morituri',
-    'Napoleon Dynamite',
-    'Pulp Fiction'
-  ];
-  TaskDone: any[] = [ 'Heat',];
+export class HomeComponent implements OnInit {
+  eventList: any[] = [];
+  constructor( private eventService: EventService){
+
+  }
+  ngOnInit(): void {
+    this.loadAllEvents();
+  }
+  loadAllEvents(){
+    this.eventService.getEvents().subscribe((result: any)=>{
+     this.eventList = result.data;
+    })
+  }
+
+  
 
   // Define template reference variables for the drop lists
   @ViewChild('ongoingTasks') ongoingTasks: any;

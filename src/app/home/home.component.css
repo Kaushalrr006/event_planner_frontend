@@ -1,22 +1,7 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.custom-toolbar {
-    background-color: #333; 
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .toolbar-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-link {
+.nav-link {
     color: white;
     text-decoration: none;
     margin-left: 20px; 
@@ -25,10 +10,6 @@
   
   .nav-link:hover {
     color: cornflowerblue; 
-  }
-  
-  .spacer {
-    flex: 1; 
   }
 
   .wrapper {
