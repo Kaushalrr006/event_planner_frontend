@@ -1,5 +1,5 @@
-<div id="event">
-  <!-- <div class="container">
+<!--<div id="event">
+   <div class="container">
     
     <h2>Ongoing Tasks </h2>
     <div cdkDropList #ongoingTasks="cdkDropList" [cdkDropListData]="Tasks" [cdkDropListConnectedTo]="[doneMovieList]"
@@ -7,21 +7,28 @@
       <div class="task-block" *ngFor="let task of Tasks" cdkDrag>{{ task }}</div>
     </div>
 
-  </div> -->
+  </div> 
 
   <div class="container">
     <h2>Tasks done</h2>
 
-    <!-- Tasks Done -->
+     Tasks Done
     <div cdkDropList #doneMovieList="cdkDropList" [cdkDropListData]="eventList" [cdkDropListConnectedTo]="[ongoingTasks]"
       class="tasks-done" (cdkDropListDropped)="onDrop($event)">
-      <!-- Add a placeholder item or an initial item when the list is empty -->
+      Add a placeholder item or an initial item when the list is empty 
       <div class="task-block placeholder" *ngIf="eventList.length === 0" cdkDrag>
         Drag and drop tasks that are done here
       </div>
 
-      <!-- Display the actual tasks -->
-      <!-- <div class="task-block" *ngFor="let doneTask of evenList" cdkDrag>{{ doneTask }}</div> -->
+       Display the actual tasks 
+       <div class="task-block" *ngFor="let doneTask of evenList" cdkDrag>{{ doneTask }}</div> 
     </div>
   </div>
+</div>-->
+<div class="course-list-container">
+  <h2>All events</h2>
+<div class="course-list" *ngFor="let event of eventList">
+  <h3>{{event.title}}</h3>
+  <p>{{event.description}}</p>
+</div>
 </div>
