@@ -10,6 +10,6 @@ export class EventService {
   constructor(private http: HttpClient) { }
 
   getEvents(): Observable<any[]> {
-    return this.http.get<any[]>('https://backend-eventapp.onrender.com/get');
+    return this.http.get<any[]>('http://localhost:5000/get');
   }
 }
