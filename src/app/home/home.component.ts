@@ -9,24 +9,35 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   eventList: any[] = [];
- 
-  constructor( private eventService: EventService){
+
+  constructor(private eventService: EventService) {
 
   }
   ngOnInit(): void {
     this.loadAllEvents();
   }
-  loadAllEvents(){
-    this.eventService.getEvents().subscribe((result: any)=>{
+  loadAllEvents() {
+    this.eventService.getEvents().subscribe((result: any) => {
       console.log(result)
-     this.eventList = result.data;
+      this.eventList = result.data;
     })
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 }
 
-  
-
-  // Define template reference variables for the drop lists
+// Define template reference variables for the drop lists
 //   @ViewChild('ongoingTasks') ongoingTasks: any;
 //   @ViewChild('doneMovieList') doneMovieList: any;
 

@@ -25,10 +25,21 @@
     </div>
   </div>
 </div>-->
-<div class="course-list-container">
+<!-- <div class="course-list-container">
   <h2>All events</h2>
 <div class="course-list" *ngFor="let event of eventList">
   <h4>{{event.title}}</h4>
   <p>{{event.description}}</p>
 </div>
+</div> -->
+<div class="todo-list" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="todo-item" *ngFor="let event of eventList" cdkDrag [cdkDragData]="event">
+    <h4>{{ event.title }}</h4>
+    <p>{{ event.description }}</p>
+  </div>
 </div>
+
+<div class="done-list" cdkDropList (cdkDropListDropped)="drop($event)">
+  
+</div>
+
