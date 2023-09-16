@@ -11,8 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EventCardComponent } from './event-card/event-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { EventCardComponent } from './event-card/event-card.component';
 
 
 

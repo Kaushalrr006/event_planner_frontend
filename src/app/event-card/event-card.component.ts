@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './event-card.component.html',
   styleUrls: ['./event-card.component.css']
 })
-export class EventCardComponent {
-
+export class EventCardComponent { 
 }
