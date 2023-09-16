@@ -10,9 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   eventList: any[] = [];
   inProgress: any[]=[];
-  // todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-
-  // done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  done: any[] = [];
   constructor(private eventService: EventService) {
 
   }
@@ -26,16 +24,20 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  drop(event: CdkDragDrop<any[]>) {
+  drop(event: CdkDragDrop<any[]>, targetStatus: string) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
+      const cardToMove = event.previousContainer.data[event.previousIndex];
+      cardToMove.status = targetStatus;
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex
       );
+
+      // api call
     }
   }
 }

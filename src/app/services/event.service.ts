@@ -12,4 +12,12 @@ export class EventService {
   getEvents(): Observable<any[]> {
     return this.http.get<any[]>('https://backend-eventapp.onrender.com/get');
   }
+  updateCardStatus(cardId: string, newStatus: string): Observable<any> {
+    const body = { status: newStatus }; // Send the new status in the request body
+
+    // Send a PATCH request to update the card's status
+    return this.http.patch('http://localhost:5000/update/:id/status', body);
+  }
 }
+
+

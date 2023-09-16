@@ -80,7 +80,7 @@
   </div>
 </div>
  -->
- <div class="example-container">
+ <!-- <div class="example-container">
   <h2>To do</h2>
   <div
     cdkDropList
@@ -105,4 +105,42 @@
     (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let item of inProgress" cdkDrag>{{item.title}} <br>{{item.description}}</div>
   </div>
+</div> -->
+<div class="event-list">
+  <!-- To-Do Column -->
+  <div class="column" cdkDropList   #todoList="cdkDropList"
+  [cdkDropListData]="eventList"
+  [cdkDropListConnectedTo]="[doneList,inprogressList]"
+  class="example-list"(cdkDropListDropped)="drop($event, 'todo')">
+    <h2>To-Do</h2>
+    <div *ngFor="let event of eventList" class="event" cdkDrag>
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.description }}</p>
+    </div>
+  </div>
+
+  <!-- In Progress Column -->
+  <div class="column" cdkDropList #inprogressList="cdkDropList"
+  [cdkDropListData]="inProgress"
+  [cdkDropListConnectedTo]="[todoList,doneList]"
+  class="example-list"(cdkDropListDropped)="drop($event, 'inProgress')">
+    <h2>In Progress</h2>
+    <div *ngFor="let event of inProgress" class="event" cdkDrag>
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.description }}</p>
+    </div>
+  </div>
+
+  <!-- Done Column -->
+  <div class="column" cdkDropList #doneList="cdkDropList"
+  [cdkDropListData]="done"
+  [cdkDropListConnectedTo]="[todoList,inprogressList]"
+  class="example-list" (cdkDropListDropped)="drop($event, 'done')">
+    <h2>Done</h2>
+    <div *ngFor="let event of done" class="event" cdkDrag>
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.description }}</p>
+    </div>
+  </div>
 </div>
+

@@ -1,4 +1,4 @@
-
+/* /* 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .nav-link {
@@ -55,7 +55,7 @@
 .task-block.cdk-drag-preview,
 .task-block.cdk-drag-placeholder,
 .task-block.cdk-drag-animating {
-  /* border-radius: 50%;  */
+  /* border-radius: 50%;  
   width: 50px;
   height: 50px; 
   display: flex;
@@ -72,17 +72,17 @@
   }
   /* .tasks-list.cdk-drop-list-dragging .movie-block:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  } */
+  } 
 
   .container {
-    width: 40%; /* Reduce container width */
-    margin: 20px 10px 10px 0; /* Adjust margins */
+    width: 40%; /* Reduce container width 
+    margin: 20px 10px 10px 0; /* Adjust margins 
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    background-color: #b3daec; /* Background color for containers */
-    border-radius: 8px; /* Rounded edges for containers */
-    padding: 10px; /* Padding for containers */
+    background-color: #b3daec; /* Background color for containers 
+    border-radius: 8px; /* Rounded edges for containers 
+    padding: 10px; /* Padding for containers 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -100,7 +100,7 @@
   }
   .task-block:hover {
     background-color: #e0e0e0; 
-    /* transform: scale(1.05);  */
+    /* transform: scale(1.05);  
     transition: background-color 0.3s, transform 0.3s;
   }
   .course-list-container {
@@ -113,7 +113,7 @@
     gap: 20px;
   }
 
-/* Container for all events */
+/* Container for all events 
 .course-list-container {
   display: flex;
   flex-direction: row;
@@ -121,7 +121,7 @@
   padding: 20px;
 }
 
-/* List for "To Do" events */
+/* List for "To Do" events 
 .todo-list {
   background-color: #f0f0f0;
   padding: 10px;
@@ -131,7 +131,7 @@
   border-radius: 5px;
 }
 
-/* List for "Done" events */
+/* List for "Done" events 
 .done-list {
   background-color: #e0e0e0;
   padding: 10px;
@@ -141,7 +141,7 @@
   border-radius: 5px;
 }
 
-/* Individual event item */
+/* Individual event item 
 .todo-item, .done-item {
   background-color: #fff;
   padding: 10px;
@@ -151,7 +151,7 @@
   cursor: grab;
 }
 
-/* Styling when dragging an item */
+ Styling when dragging an item 
 .todo-item.cdk-drag, .done-item.cdk-drag {
   cursor: grabbing;
   opacity: 0.7;
@@ -159,7 +159,7 @@
   border: 1px dashed #aaa;
 }
 
-/* Styling when an item is over a drop container */
+ Styling when an item is over a drop container
 .cdk-drag-preview {
   opacity: 0.5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -184,7 +184,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  cursor: move;
+  cursor: grabbing;
   background: white;
   font-size: 14px;
 }
@@ -211,4 +211,82 @@
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}  */
+/* Container for the event list */
+.event-list {
+  display: flex;
+  gap: 10px; /* Reduce the gap between columns */
+}
+
+/* Column styles */
+.column {
+  flex: 1;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px; /* Reduce the space between columns */
+}
+
+/* Header styles */
+.column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Event styles */
+.event {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dragging styles */
+.cdk-drag-preview {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px dashed #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 0.8;
+  
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+/* Custom scrollbar for the event list */
+.column::-webkit-scrollbar {
+  width: 8px;
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.column::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .event-list {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin-right: 0; /* Remove the margin between columns on smaller screens */
+    margin-bottom: 10px; /* Add margin below columns on smaller screens */
+  }
 }
