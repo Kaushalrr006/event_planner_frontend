@@ -32,14 +32,77 @@
   <p>{{event.description}}</p>
 </div>
 </div> -->
-<div class="todo-list" cdkDropList (cdkDropListDropped)="drop($event)">
-  <div class="todo-item" *ngFor="let event of eventList" cdkDrag [cdkDragData]="event">
+<!-- <div class="todo-list" cdkDropList (cdkDropListDropped)="drop($event)">
+  <h3>All Events</h3>
+  <div cdkDropList [cdkDropListData]="eventList" class="todo-item" *ngFor="let event of eventList" cdkDrag [cdkDragData]="event">
+    <div class="example-box" *ngFor="let event of eventList; let i = index" cdkDrag></div>
     <h4>{{ event.title }}</h4>
     <p>{{ event.description }}</p>
   </div>
 </div>
 
 <div class="done-list" cdkDropList (cdkDropListDropped)="drop($event)">
-  
+  <h3>In Progress</h3>
+  <div cdkDropList [cdkDropListData]="inProgress" class="todo-item" *ngFor="let event of inProgress" cdkDrag [cdkDragData]="event">
+    <div class="example-box" *ngFor="let event of inProgress; let i = index" cdkDrag></div>
+    <h4>{{ event.title }}</h4>
+    <p>{{ event.description }}</p>
+  </div>
+</div>  -->
+
+<!-- <div cdkDropListGroup class="task-lists">
+  <div class="task-list">
+       To Do 
+      <div class="example-container">
+          <h2 class="head-title">To do <span *ngIf="eventList.length > 0">- {{ eventList.length }}</span></h2>
+          <div cdkDropList [cdkDropListData]="eventList" class="example-list" (cdkDropListDropped)="drop($event)">
+              <div class="example-box" *ngFor="let item of eventList; let i = index" cdkDrag>
+                  {{ item.title }}
+                  {{ item.description }}
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="task-list">
+       In Progress 
+      <div class="example-container">
+          <h2 class="head-title">Ongoing Task <span *ngIf="inProgress.length > 0">- {{ inProgress.length }}</span></h2>
+          <div cdkDropList [cdkDropListData]="inProgress" class="example-list" (cdkDropListDropped)="drop($event)">
+              <div class="example-box" *ngFor="let item of inProgress; let i = index" cdkDrag>
+                  {{ item.title }}
+                  {{ item.description }}
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ -->
+ <div class="example-container">
+  <h2>To do</h2>
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="eventList"
+    [cdkDropListConnectedTo]="[doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of eventList" cdkDrag>{{item.title}}<br>{{item.description}}</div>
+  </div>
 </div>
 
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="inProgress"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of inProgress" cdkDrag>{{item.title}} <br>{{item.description}}</div>
+  </div>
+</div>
