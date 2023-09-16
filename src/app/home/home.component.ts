@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { EventService } from '../services/event.service';
 import { ActivatedRoute } from '@angular/router';
+
+declare var particlesJS: any; // Declaration for particlesJS
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,19 +12,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   eventList: any[] = [];
-  inProgress: any[]=[];
+  inProgress: any[] = [];
   done: any[] = [];
-  constructor(private eventService: EventService) {
 
-  }
+  constructor(private eventService: EventService) { }
+
   ngOnInit(): void {
     this.loadAllEvents();
+
+    // Initialize particlesJS here
+    this.initializeParticlesJS();
   }
+
   loadAllEvents() {
     this.eventService.getEvents().subscribe((result: any) => {
-      console.log(result)
       this.eventList = result.data;
-    })
+    });
   }
 
   drop(event: CdkDragDrop<any[]>, targetStatus: string) {
@@ -37,9 +43,124 @@ export class HomeComponent implements OnInit {
         event.currentIndex
       );
 
-      // api call
+      // Make any API calls or updates you need here
+
+      // Reinitialize particlesJS after a drop if needed
+      this.initializeParticlesJS();
     }
   }
+
+  private initializeParticlesJS() {
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#ff5722' // Particle color
+        },
+        shape: {
+          type: 'circle', // Particle shape
+          stroke: {
+            width: 0,
+            color: '#000000'
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: 'img/github.svg',
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#ff5722',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'grab'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+  }
 }
-
-

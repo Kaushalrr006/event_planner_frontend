@@ -213,6 +213,8 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }  */
 /* Container for the event list */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .event-list {
   display: flex;
   gap: 10px; /* Reduce the gap between columns */
@@ -290,3 +292,25 @@
     margin-bottom: 10px; /* Add margin below columns on smaller screens */
   }
 }
+
+/* event-card.component.css */
+mat-card {
+  margin: 10px;
+  max-width: 300px;
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+mat-card-content {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+

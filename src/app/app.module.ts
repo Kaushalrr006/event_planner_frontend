@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventCardComponent } from './event-card/event-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -19,7 +21,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    EventCardComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DragDropModule,
     MatButtonModule,
     HttpClientModule,
+    MatCardModule,
     FormsModule
   ],
   providers: [],
