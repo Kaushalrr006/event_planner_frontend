@@ -26,7 +26,11 @@ export class HomeComponent implements OnInit {
 
   loadAllEvents() {
     this.eventService.getEvents().subscribe((result: any) => {
-      this.eventList = result.data;
+      // this.eventList = result.data;
+      this.eventList = result.todo;
+      this.inProgress = result.progress;
+      this.done = result.done; 
+
     });
   }
 
@@ -45,7 +49,7 @@ export class HomeComponent implements OnInit {
           event.previousIndex,
           event.currentIndex
         );
-        
+
       },
       (error)=>{
        console.log('Error updating card status');
