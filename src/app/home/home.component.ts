@@ -35,15 +35,23 @@ export class HomeComponent implements OnInit {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       const cardToMove = event.previousContainer.data[event.previousIndex];
+      console.log('cardToMove:', cardToMove);
       cardToMove.status = targetStatus;
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
 
-      // Make any API calls or updates you need here
+      this.eventService.updateCardStatus(cardToMove._id, targetStatus).subscribe(() => {
+        transferArrayItem(
+          event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex
+        );
+        
+      },
+      (error)=>{
+       console.log('Error updating card status');
+       cardToMove.status = event.previousContainer.id;
+      }
+      );
 
       // Reinitialize particlesJS after a drop if needed
       this.initializeParticlesJS();

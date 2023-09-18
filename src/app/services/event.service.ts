@@ -14,9 +14,9 @@ export class EventService {
   }
   updateCardStatus(cardId: string, newStatus: string): Observable<any> {
     const body = { status: newStatus }; // Send the new status in the request body
-
+    console.log('cardId in service', cardId);
     // Send a PATCH request to update the card's status
-    return this.http.patch('http://localhost:5000/update/:id/status', body);
+    return this.http.patch(`https://backend-eventapp.onrender.com/update/${cardId}/status`, body);
   }
 }
 
