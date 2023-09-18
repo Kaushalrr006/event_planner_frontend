@@ -61,6 +61,19 @@ export class HomeComponent implements OnInit {
       this.initializeParticlesJS();
     }
   }
+  
+  deleteEvent(cardId: string) {
+    this.eventService.deleteEvent(cardId).subscribe(
+      () => {
+        this.inProgress = this.inProgress.filter(event => event._id !== cardId);
+      },
+      (error) => {
+        console.error('Error deleting event:', error);
+      }
+    );
+  }
+
+ 
 
   private initializeParticlesJS() {
     particlesJS('particles-js', {

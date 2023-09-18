@@ -18,6 +18,13 @@ export class EventService {
     // Send a PATCH request to update the card's status
     return this.http.patch(`https://backend-eventapp.onrender.com/update/${cardId}/status`, body);
   }
+  deleteEvent(cardId: string): Observable<any> {
+    
+    return this.http.delete(`https://backend-eventapp.onrender.com/delete/${cardId}`);
+  }
 }
+ 
+
+
 
 
