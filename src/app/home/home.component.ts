@@ -63,9 +63,12 @@ export class HomeComponent implements OnInit {
   }
   
   deleteEvent(cardId: string) {
+    
     this.eventService.deleteEvent(cardId).subscribe(
       () => {
+        this.eventList = this.eventList.filter(event => event._id === event.cardId);
         this.inProgress = this.inProgress.filter(event => event._id !== cardId);
+        this.done = this.done.filter(event => event._id !== cardId);
       },
       (error) => {
         console.error('Error deleting event:', error);
