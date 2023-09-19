@@ -22,6 +22,14 @@ export class EventService {
     
     return this.http.delete(`https://backend-eventapp.onrender.com/delete/${cardId}`);
   }
+
+  createEvent(body: string): Observable<any> {
+    return this.http.post("http://localhost:5000/create", body);
+  }
+  addEvent(bodyData: any): Observable<any> {
+    return this.http.post("https://backend-eventapp.onrender.com/create", bodyData);
+  }
+
 }
  
 
