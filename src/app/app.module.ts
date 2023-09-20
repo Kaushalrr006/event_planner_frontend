@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { EventCardComponent } from './event-card/event-card.component';
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -22,7 +23,8 @@ import { EventCardComponent } from './event-card/event-card.component';
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    EventCardComponent
+    EventCardComponent,
+    UpdateComponent
     
   ],
   imports: [

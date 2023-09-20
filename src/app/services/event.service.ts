@@ -19,19 +19,18 @@ export class EventService {
     return this.http.patch(`https://backend-eventapp.onrender.com/update/${cardId}/status`, body);
   }
   deleteEvent(cardId: string): Observable<any> {
-    
-    return this.http.delete(`https://backend-eventapp.onrender.com/delete/${cardId}`);
-  }
 
-  createEvent(body: string): Observable<any> {
-    return this.http.post("http://localhost:5000/create", body);
+    return this.http.delete(`https://backend-eventapp.onrender.com/delete/${cardId}`);
   }
   addEvent(bodyData: any): Observable<any> {
     return this.http.post("https://backend-eventapp.onrender.com/create", bodyData);
   }
+  updateEvent(cardId: string, bodyData: any): Observable<any> {
+    return this.http.patch(`http://localhost:5000/update/${cardId}`, bodyData);
+  }
 
 }
- 
+
 
 
 

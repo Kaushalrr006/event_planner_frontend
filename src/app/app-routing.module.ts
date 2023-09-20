@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventCardComponent } from './event-card/event-card.component'; // Adjust the path as needed
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -23,6 +24,9 @@ const routes: Routes = [
   {
     path: 'event-card',
     component: EventCardComponent
+  },
+  {
+    path: 'update', component: UpdateComponent
   }
   
 ];

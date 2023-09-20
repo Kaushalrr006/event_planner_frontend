@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { EventService } from '../services/event.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 declare var particlesJS: any; // Declaration for particlesJS
 
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   inProgress: any[] = [];
   done: any[] = [];
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit(): void {
     this.loadAllEvents();
@@ -75,6 +75,7 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+  
 
  
 
@@ -191,4 +192,9 @@ export class HomeComponent implements OnInit {
     });
 
   }
+  onEditClick(): void {
+    // Navigate to the update component
+    this.router.navigate(['/update']);
+  }
 }
+
