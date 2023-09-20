@@ -192,9 +192,9 @@ export class HomeComponent implements OnInit {
     });
 
   }
-  onEditClick(): void {
-    // Navigate to the update component
-    this.router.navigate(['/update']);
+  onEditClick(cardId: string): void {
+    console.log(cardId);
+    this.router.navigate(['/update/', cardId]);
   }
 }
 

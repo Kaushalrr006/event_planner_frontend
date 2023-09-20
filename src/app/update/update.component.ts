@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit { 
- eventId: string;
+ cardId: string;
  updateEventData: any= {};
   title: string;
   description: string;
@@ -18,9 +18,9 @@ private eventService: EventService){}
 
   
   ngOnInit(): void {
-  this.route.params.subscribe(params =>{
-    this.eventId = params['id'];
-  });
+    this.route.paramMap.subscribe((params) => {
+      this.cardId = params.get('cardId');
+    });
   }
 
   onEdit( eventId: string){

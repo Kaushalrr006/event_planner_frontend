@@ -26,7 +26,7 @@ const routes: Routes = [
     component: EventCardComponent
   },
   {
-    path: 'update', component: UpdateComponent
+    path: 'update/:cardId', component: UpdateComponent
   }
   
 ];
