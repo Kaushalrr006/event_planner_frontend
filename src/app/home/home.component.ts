@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       // this.eventList = result.data;
       this.eventList = result.todo;
       this.inProgress = result.progress;
-      this.done = result.done; 
+      this.done = result.done;
 
     });
   }
@@ -61,12 +61,12 @@ export class HomeComponent implements OnInit {
       this.initializeParticlesJS();
     }
   }
-  
+
   deleteEvent(cardId: string) {
-    
+
     this.eventService.deleteEvent(cardId).subscribe(
       () => {
-        this.eventList = this.eventList.filter(event => event._id === event.cardId);
+        this.eventList = this.eventList.filter(event => event._id !== cardId);
         this.inProgress = this.inProgress.filter(event => event._id !== cardId);
         this.done = this.done.filter(event => event._id !== cardId);
       },
@@ -75,9 +75,9 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  
 
- 
+
+
 
   private initializeParticlesJS() {
     particlesJS('particles-js', {
