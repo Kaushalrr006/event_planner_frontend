@@ -13,7 +13,7 @@ Node.js
 Angular CLI
 Once you have the prerequisites installed, you can run the following commands to install the dependencies and start the application:
 
-npm install
+
 ng serve
 
 
