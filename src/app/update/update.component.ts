@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UpdateComponent implements OnInit { 
  cardId: string;
- updateEventData: any= {};
+ event: string;
   title: string;
   description: string;
 
@@ -23,18 +23,18 @@ private eventService: EventService){}
     });
   }
 
-  onEdit( eventId: string){
-    console.log(eventId);
+  onEdit( cardId: string){
+    console.log(cardId);
    let bodyData = {
-    "title": this.updateEventData.title,
-    "description": this.updateEventData.description,
+    "title": this.title,
+    "description": this.description,
    };
-   this.eventService.updateEvent(eventId, bodyData).subscribe((resultData: any) =>{
+   this.eventService.updateEvent(cardId, bodyData).subscribe((resultData: any) =>{
    alert("event updated!")
    this.title = "";
    this.description = "";
    })
   }
-  
-  
+
 }
+  
