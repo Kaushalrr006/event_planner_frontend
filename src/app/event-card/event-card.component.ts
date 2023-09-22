@@ -1,10 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
+import { trigger, transition, query, stagger, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-event-card',
   templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.css']
+  styleUrls: ['./event-card.component.css'],
+  animations: [
+    trigger('cardAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-20px)' }),
+        animate('0.3s ease-in-out', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+    ]),
+  ],
 })
 export class EventCardComponent {
   title: string="";
@@ -26,5 +35,7 @@ export class EventCardComponent {
 
     });
   }
+
+  
   
 }
