@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-update',
@@ -14,7 +16,7 @@ export class UpdateComponent implements OnInit {
   description: string;
 
  constructor(private route: ActivatedRoute, 
-private eventService: EventService){}
+private eventService: EventService,  private router: Router){}
 
   
   ngOnInit(): void {
@@ -33,6 +35,8 @@ private eventService: EventService){}
    alert("event updated!")
    this.title = "";
    this.description = "";
+   this.router.navigate(['/']);
+
    })
   }
 

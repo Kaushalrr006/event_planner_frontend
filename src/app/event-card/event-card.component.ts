@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { trigger, transition, query, stagger, animate, style } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-card',
@@ -19,7 +20,7 @@ export class EventCardComponent {
   title: string="";
   description: string="";
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService,  private router: Router) { }
 
   onSubmit(){
     console.log("onSubmit")
@@ -32,6 +33,9 @@ export class EventCardComponent {
       alert("Event added successfully")
       this.title="";
       this.description ="";
+
+
+      this.router.navigate(['/']);
 
     });
   }
