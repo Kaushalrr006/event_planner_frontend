@@ -26,7 +26,7 @@ export class EventService {
     return this.http.post("https://backend-eventapp.onrender.com/create", bodyData);
   }
   updateEvent(cardId: string, bodyData: any): Observable<any> {
-    return this.http.patch(`http://localhost:5000/update/${cardId}`, bodyData);
+    return this.http.patch(`https://backend-eventapp.onrender.com/update/${cardId}`, bodyData);
   }
 
 }
