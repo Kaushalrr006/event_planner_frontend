@@ -27,6 +27,8 @@ https://event-planner-frontend-2.vercel.app/.
 
 The application allows users to:
 
+- Drag and Drop cards
+
 -Create new events
 
 -Read existing events
