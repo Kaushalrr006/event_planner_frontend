@@ -30,6 +30,12 @@ export class EventService {
   updateEvent(cardId: string, bodyData: any): Observable<any> {
     return this.http.patch(`https://backend-eventapp.onrender.com/update/${cardId}`, bodyData);
   }
+  registerUser(bodyData: any): Observable<any> {
+    return this.http.post("https://backend-eventapp.onrender.com/signup", bodyData);
+  }
+  // login(bodyData: any): Observable<any> {
+  //   return this.http.post("http://localhost:5000/signin", bodyData);
+  // }
 
 }
 
