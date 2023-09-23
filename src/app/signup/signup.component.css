@@ -1,5 +1,4 @@
-/* Default styles */
-.login-container {
+.signup-container {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
@@ -8,10 +7,9 @@
     max-width: 400px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 10rem;
 }
 
-.login-container h2 {
+.signup-container h2 {
     margin-bottom: 20px;
 }
 
@@ -32,7 +30,7 @@
     margin-bottom: 5px;
 }
 
-.login-button {
+.signup-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -42,27 +40,6 @@
     font-size: 16px;
 }
 
-.login-button:hover {
+.signup-button:hover {
     background-color: #0056b3;
-}
-
-.create-account {
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.create-account a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.create-account a:hover {
-    text-decoration: underline;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .login-container {
-        margin-top: 5rem;
-    }
 }

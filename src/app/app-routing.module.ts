@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventCardComponent } from './event-card/event-card.component'; // Adjust the path as needed
 import { UpdateComponent } from './update/update.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'update/:cardId', component: UpdateComponent
+  },
+  {
+    path: 'signup', component: SignupComponent
   }
   
 ];

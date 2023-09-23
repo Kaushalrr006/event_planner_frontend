@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { EventCardComponent } from './event-card/event-card.component';
 import { UpdateComponent } from './update/update.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -24,7 +25,8 @@ import { UpdateComponent } from './update/update.component';
     LoginComponent,
     DashboardComponent,
     EventCardComponent,
-    UpdateComponent
+    UpdateComponent,
+    SignupComponent
     
   ],
   imports: [
