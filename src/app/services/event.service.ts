@@ -33,9 +33,9 @@ export class EventService {
   registerUser(bodyData: any): Observable<any> {
     return this.http.post("https://backend-eventapp.onrender.com/signup", bodyData);
   }
-  // login(bodyData: any): Observable<any> {
-  //   return this.http.post("http://localhost:5000/signin", bodyData);
-  // }
+  login(bodyData: any): Observable<any> {
+    return this.http.post("https://backend-eventapp.onrender.com/signin", bodyData);
+  }
 
 }
 

@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { EventCardComponent } from './event-card/event-card.component';
 import { UpdateComponent } from './update/update.component';
@@ -23,7 +22,6 @@ import { SignupComponent } from './signup/signup.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    DashboardComponent,
     EventCardComponent,
     UpdateComponent,
     SignupComponent

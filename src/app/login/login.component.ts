@@ -16,26 +16,31 @@ export class LoginComponent {
 
  constructor(private router: Router, private eventService: EventService){}
 
- signIn(){
-  // console.log(this.email);
-  // console.log(this.password);
-  
-  // let bodyData ={
-  //   email: this.email,
-  //   password: this.password,
-  // };
-  // this.eventService.login(bodyData).subscribe((resultData: any) => {
-  //   console.log(resultData);
-  //   if(resultData.status){
-  //     this.router.navigate(['/home']);
-  //   }
-  //   else{
-  //     alert("Incorrect password or email");
-  //     console.log("Error Login");
-  //   }
+ signIn() {
+  console.log(this.email);
+  console.log(this.password);
 
-  // });
- }
+  let bodyData = {
+    email: this.email,
+    password: this.password,
+  };
+
+  this.eventService.login(bodyData).subscribe(
+    (resultData: any) => {
+      console.log("resultData", resultData);
+      if (resultData.status) {
+        this.router.navigate(['/home']);
+      } else {
+        alert("Incorrect password or email");
+        console.log("Error Login:", resultData.message); 
+      }
+    },
+    (error) => {
+      console.error("Error:", error);
+      alert("An error occurred while logging in. Please try again later.");
+    }
+  );
+}
 }
 
 
