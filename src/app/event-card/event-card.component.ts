@@ -35,7 +35,7 @@ export class EventCardComponent {
       this.description ="";
 
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
 
     });
   }
