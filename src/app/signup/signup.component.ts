@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
+import { Router, RouterLink } from '@angular/router';
+
 
 
 @Component({
@@ -12,7 +14,7 @@ export class SignupComponent  implements OnInit{
  email: string = "";
  password: string = "";
 
- constructor(private eventService: EventService) { }
+ constructor(private eventService: EventService, private router: Router) { }
   ngOnInit(): void {}
 
   signUp(){
@@ -25,6 +27,8 @@ export class SignupComponent  implements OnInit{
     this.eventService.registerUser(bodyData).subscribe((resultData: any) => {
       console.log(resultData);
       alert("Registerd successfully");
+      this.router.navigate(['/']);
+
 
     });
   }
