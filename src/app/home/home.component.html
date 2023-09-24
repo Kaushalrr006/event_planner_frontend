@@ -23,7 +23,7 @@
                 Add Task
             </a>
 
-            <!-- Update button -->
+            
            
         </div>
     </div>
@@ -54,18 +54,13 @@
         <div class="todo-bg p-2 rounded-lg shadow-md relative">
           <h3 class="text-md font-semibold mb-1 ml-2">{{ event.title }}</h3>
           <p class="text-sm text-gray-600 ml-2">{{ event.description }}</p>
-          <p>{{event.status}}</p>
           <div class="absolute inset-x-0 bottom-0 p-2">
             <button
               class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-sm float-right"
              (click)=" onEditClick(event._id)">
               Edit
             </button>
-            <!-- <button
-              class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-full text-sm float-right mr-2"
-              (click)="deleteEvent(event._id)">
-              Delete
-            </button> -->
+            
             <button
             class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-full text-sm float-right mr-2"
             (click)="deleteEvent(event._id)">
@@ -92,7 +87,7 @@
         <div class="inprogress-bg p-2 rounded-lg shadow-md relative">
           <h3 class="text-md font-semibold mb-1 ml-2">{{ event.title }}</h3>
           <p class="text-sm text-gray-600 ml-2">{{ event.description }}</p>
-          <p>{{event.status}}</p>
+          
           <div class="absolute inset-x-0 bottom-0 p-2">
             <button
               class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-sm float-right"
@@ -131,11 +126,7 @@
         (click)="onEditClick(event._id)">
           Edit
         </button>
-        <!-- <button
-          class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-full text-sm float-right mr-2"
-          (click)="deleteEvent(event._id)">
-          Delete
-        </button> -->
+       
         <button
         class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-full text-sm float-right mr-2"
         (click)="deleteEvent(event._id)">
