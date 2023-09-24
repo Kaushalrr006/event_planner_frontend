@@ -35,7 +35,7 @@ private eventService: EventService,  private router: Router){}
    alert("event updated!")
    this.title = "";
    this.description = "";
-   this.router.navigate(['/']);
+   this.router.navigate(['/home']);
 
    })
   }
