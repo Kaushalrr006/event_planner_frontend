@@ -1,6 +1,15 @@
 <ul>
     <!-- [(ngModel)]="description" [ngModelOptions]="{standalone: true}" -->
     <!-- [(ngModel)]="title" [ngModelOptions]="{standalone: true}" -->
+
+    <mat-toolbar class="custom-toolbar flex flex-wrap justify-between items-center bg-gray-300 bg-opacity-60">
+        <span class="toolbar-title text-lg md:text-xl lg:text-2xl xl:text-3xl">Event Planner</span>
+        <div class="spacer hidden md:block lg:hidden xl:block flex-grow"></div>
+        <div class="flex flex-wrap space-x-2">
+            <a mat-button routerLink="/home" class="nav-link">Home</a>
+            <a mat-button routerLink="/" class="nav-link">Login</a>
+        </div>
+    </mat-toolbar>
   
   <body class="bg-gray-100">
       <div class="py-4 text-white text-center">
@@ -21,6 +30,10 @@
               <div class="text-center">
                   <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" (click)="onEdit(cardId)">Edit</button>
               </div>
+
+              <div class="mt-4 text-center">
+                <a routerLink="/home" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Go to Home</a>
+            </div>
           </form>
       </div>
   </body>
