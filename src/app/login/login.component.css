@@ -66,3 +66,12 @@
         margin-top: 5rem;
     }
 }
+
+.login-container {
+    background-image: url('/src/assets/login-bg.jpg'); /* Replace 'your-background-image.jpg' with your image URL */
+    background-size: cover; /* This ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    
+  }
+  

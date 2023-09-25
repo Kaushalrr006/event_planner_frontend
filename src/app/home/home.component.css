@@ -98,4 +98,10 @@ mat-card-actions {
   display: flex;
   justify-content: flex-end;
 }
+/* Base styles for columns */
+.column {
+  flex: 1;
+  min-width: 0; /* Allow columns to shrink */
+}
+
 
