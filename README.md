@@ -9,7 +9,6 @@ Welcome to the Event Manager project for Hacktoberfest 2023! We invite you to co
 ## 🚀 Quick Links
 
 - **Live Demo**: [Event Planner Frontend](https://angular-eventplanner.vercel.app/)
-- **Project Issues**: [Hacktoberfest Issues](https://github.com/your-username/event-manager-mean/issues)
 - **Hacktoberfest Website**: [Hacktoberfest](https://hacktoberfest.com/)
 
 ## 🛠️ Getting Started
