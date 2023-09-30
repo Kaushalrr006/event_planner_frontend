@@ -11,6 +11,7 @@ To run the application locally, you will need to have the following installed:
 
 Node.js
 Angular CLI
+Material Ui Angular
 Once you have the prerequisites installed, you can run the following commands to install the dependencies and start the application:
 
 
