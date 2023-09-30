@@ -1,60 +1,38 @@
+# Event Manager using MEAN 
 
-# 🎉 Hacktoberfest 2023 - Event Manager using MEAN 🎉
+Event Planner Frontend
+This is a frontend application built with Angular, HTML, CSS, JavaScript, and TypeScript. It is a CRUD application that allows users to create, read, update, and delete events.
 
-Welcome to the Event Manager project for Hacktoberfest 2023! We invite you to contribute to this exciting project and be part of an amazing open-source community. Help us improve the Event Planner Frontend built with Angular and make it even better!
+The application is hosted at https://event-planner-frontend-2.vercel.app/.
 
-## 🚀 Quick Links
+Getting Started
+To run the application locally, you will need to have the following installed:
 
-- **Live Demo**: [Event Planner Frontend](https://angular-eventplanner.vercel.app/)
-- **Hacktoberfest Website**: [Hacktoberfest](https://hacktoberfest.com/)
+Node.js
+Angular CLI
+Material Ui Angular
+Once you have the prerequisites installed, you can run the following commands to install the dependencies and start the application:
 
-## 🛠️ Getting Started
 
-To run the application locally, you will need to have the following prerequisites installed:
+ng serve
 
-- [Node.js](https://nodejs.org/)
-- [Angular CLI](https://cli.angular.io/)
-- [Material UI Angular](https://material.angular.io/)
 
-Once you have the prerequisites installed, you can start the application by running:
 
-To start app use: --> ng serve
+## Demo
 
-## 🎨 Features
 
-The Event Manager allows users to:
+https://event-planner-frontend-2.vercel.app/.
 
-- ✨ Drag and Drop cards
-- 📅 Create new events
-- 📖 Read existing events
-- ✏️ Update existing events
-- 🗑️ Delete existing events
+## Features
 
-## 📝 Exciting Tasks
+The application allows users to:
 
-Here are some exciting tasks you can work on during Hacktoberfest:
+-Drag and Drop cards
 
-1. **Add a Calendar View**: Implement a calendar view for event scheduling.
-2. **Enhance Drag-and-Drop**: Improve the drag-and-drop functionality for a smoother user experience.
-3. **Create User Profiles**: Develop user profiles for event organizers with customizable avatars.
-4. **Mobile Responsiveness**: Ensure the application is fully responsive for mobile devices.
-5. **Documentation**: Enhance project documentation for better developer onboarding.
+-Create new events
 
-## 🤝 How to Contribute
+-Read existing events
 
-We welcome contributions from developers of all skill levels. Whether it's fixing a bug, adding a new feature, or improving documentation, your help is valuable! To contribute:
+-Update existing events
 
-1. Fork this repository.
-2. Create a new branch for your changes.
-3. Make your contributions.
-4. Open a pull request with a clear description of your changes.
-
-## 📧 Contact
-
-If you have any questions or need assistance, feel free to reach out to us at kaushal.ratnapagol20@vit.edu.
-
-## 🙌 Acknowledgments
-
-Thanks for considering contributing to this project. Your contributions help us make this Event Manager even more awesome!
-
-Let's make Hacktoberfest 2023 unforgettable together! 🌟
+-Delete existing events
